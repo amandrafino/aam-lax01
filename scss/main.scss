@@ -4,37 +4,49 @@
 
 .bird-box {
   position: relative;
-  height: 600px;
   background: url("../img/bird-bg.jpg");
   background-attachment: fixed;
+  // background-position: center -400px;
+  background-position: top center;
   background-repeat: no-repeat;
+  height: 600px;
   background-size: cover;
-  background-position: center -425px;
-  overflow-x: hidden;
+
+  overflow: hidden;
 
   & .logo {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 400px;
-    height: 100px;
     background-image: url("../img/black-bird-logo.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    margin-top: -50px;
+    height: 100px;
+    width: 100%;
   }
 
   .fore-bird {
     position: absolute;
-    margin-left: -480px;
+    background-image: url("../img/fore-bird.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
     left: 50%;
+    margin-left: -480px;
     top: 380px;
     width: 960px;
     height: 733px;
     // background-color: transparentize(pink, 0.6);
-    background-image: url("../img/fore-bird.png");
+  }
+
+  .back-bird {
+    position: absolute;
+    background-image: url('../img/back-bird.png');
+    left: 50%;
+    margin-left: -480px;
     background-repeat: no-repeat;
-    background-position: right 0;
+    background-position: top left;
+    width: 960px;
+    height: 298px;
+
   }
 }
