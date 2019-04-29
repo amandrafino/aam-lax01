@@ -1,0 +1,35 @@
+body {
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  ;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.ff-col {
+  flex-flow: column nowrap;
+}
+
+.con-ctr {
+  justify-content: center;
+}
+
+.items-ctr {
+  align-items: center;
+}
+
+.content {
+  padding: 10px 20px;
+}
