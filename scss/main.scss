@@ -2,12 +2,14 @@
 @import "_normalize";
 @import "_globals";
 
+/* Header */
+
 .bird-box {
   position: relative;
   background: url("../img/bird-bg.jpg");
   background-attachment: fixed;
-  // background-position: center -400px;
-  background-position: top center;
+  background-position: center -400px;
+  // background-position: top center;
   background-repeat: no-repeat;
   height: 600px;
   background-size: cover;
@@ -47,6 +49,29 @@
     background-position: top left;
     width: 960px;
     height: 298px;
+  }
+}
 
+/* Store */
+/* Clothes Images Grid */
+
+#clothes-images {
+  height: 2000px;
+
+  & .clothes-images {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    figure.columns {
+      position: relative;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    figure.columns.is-showing {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 }

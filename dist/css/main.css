@@ -41,7 +41,6 @@ h1 {
 * 2. Show the overflow in Edge and IE.
 */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -76,7 +75,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -209,7 +207,6 @@ fieldset {
 *    `fieldset` elements in all browsers.
 */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -241,7 +238,6 @@ textarea {
 */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -310,7 +306,6 @@ template {
 
 body {
   line-height: 1.6;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .content {
@@ -322,68 +317,71 @@ img {
   height: auto; }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
 
 .ff-col {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap; }
 
 .con-ctr {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center; }
 
 .items-ctr {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
 
 .content {
   padding: 10px 20px; }
 
+/* Header */
 .bird-box {
   position: relative;
   background: url("../img/bird-bg.jpg");
   background-attachment: fixed;
-  background-position: top center;
+  background-position: center -400px;
   background-repeat: no-repeat;
   height: 600px;
   background-size: cover;
   overflow: hidden; }
+  .bird-box .logo {
+    position: absolute;
+    background-image: url("../img/black-bird-logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    margin-top: -50px;
+    height: 100px;
+    width: 100%; }
+  .bird-box .fore-bird {
+    position: absolute;
+    background-image: url("../img/fore-bird.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    left: 50%;
+    margin-left: -480px;
+    top: 380px;
+    width: 960px;
+    height: 733px; }
+  .bird-box .back-bird {
+    position: absolute;
+    background-image: url("../img/back-bird.png");
+    left: 50%;
+    margin-left: -480px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    width: 960px;
+    height: 298px; }
 
-.bird-box .logo {
-  position: absolute;
-  background-image: url("../img/black-bird-logo.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 50%;
-  margin-top: -50px;
-  height: 100px;
-  width: 100%; }
-
-.bird-box .fore-bird {
-  position: absolute;
-  background-image: url("../img/fore-bird.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  left: 50%;
-  margin-left: -480px;
-  top: 380px;
-  width: 960px;
-  height: 733px; }
-
-.bird-box .back-bird {
-  position: absolute;
-  background-image: url("../img/back-bird.png");
-  left: 50%;
-  margin-left: -480px;
-  background-repeat: no-repeat;
-  background-position: top left;
-  width: 960px;
-  height: 298px; }
-
-/*# sourceMappingURL=main.css.map */
+/* Store */
+/* Clothes Images Grid */
+#clothes-images {
+  height: 2000px; }
+  #clothes-images .clothes-images {
+    display: grid;
+    grid-template-columns: repeat(3, auto); }
+    #clothes-images .clothes-images figure.columns {
+      position: relative;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.3s ease-in-out; }
+    #clothes-images .clothes-images figure.columns.is-showing {
+      opacity: 1;
+      transform: translateX(0px); }

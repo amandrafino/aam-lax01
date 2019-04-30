@@ -73,5 +73,14 @@ $(window).scroll(function () {
     'transform': 'translate(0px, -' + wScroll / 40 + '%)'
   });
 
+  if (wScroll > $('.clothes-images').offset().top - ($(window).height() / 1.2)) {
+    console.log('hi');
+    $('.clothes-images figure').each(function (i) {
+      setTimeout(function () {
+        $('.clothes-images figure').eq(i).addClass('is-showing');
+      }, 150 * (i + 1));
+
+    });
+  }
 
 });
