@@ -21,5 +21,5 @@ $(window).scroll(function () {
 
     });
   }
-  /* albert */
+
 });
